@@ -9,7 +9,7 @@ logging.basicConfig(
     handlers=[logging.FileHandler("checklist_controller.log"), logging.StreamHandler()]
 )
 
-SERVICE_DB_CONECTION = DataBaseConnection()
+SERVICE_DB_CONECTION = DataBaseConnection()["checklis"]
 
 class ChecklistController:
     def __init__(self):
