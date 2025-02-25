@@ -1,4 +1,0 @@
-mongodb+srv://daniel_l8:<db_password>@cluster0.p5fb5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-user = daniel_l8
-db_password = 1234
