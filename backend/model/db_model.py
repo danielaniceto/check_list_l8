@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from uuid import uuid4
+from datetime import datetime
 
 class RequestCheckListModel(BaseModel):
     request_id_check_list: str = uuid4().hex
@@ -7,6 +8,9 @@ class RequestCheckListModel(BaseModel):
     nome_completo: str
     trecho: str
     data_ultima_manutencao: str
+    hodometro: float
+    nivel_combustivel: str
+    validade_ipva: datetime
     conservacao_veiculo: str
     ar_condicionado: str
     cartao_abastecineto: str
@@ -33,4 +37,3 @@ class UserModel(BaseModel):
     user_id: str = uuid4().hex
     user_email: str
     user_password: str
-
