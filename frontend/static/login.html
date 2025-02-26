@@ -2,21 +2,71 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <script defer src="script.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        .error { color: red; }
+        .success { color: green; }
+    </style>
 </head>
 <body>
-    <h2>Login</h2>
-    <form id="login-form">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button type="submit">Entrar</button>
-    </form>
-    <p id="message"></p>
+    <div id="app">
+        <h2>Login</h2>
+        <form @submit.prevent="login">
+            <label>Email:</label>
+            <input type="email" v-model="email" required>
+            
+            <label>Senha:</label>
+            <input type="password" v-model="password" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
+        <p v-if="message" :class="messageClass">{{ message }}</p>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    email: "",
+                    password: "",
+                    message: "",
+                    messageClass: ""
+                };
+            },
+            methods: {
+                async login() {
+                    try {
+                        const response = await fetch("http://127.0.0.1:8000/api/login", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ email: this.email, password: this.password })
+                        });
+
+                        const data = await response.json();
+
+                        if (response.ok) {
+                            this.message = "Login realizado com sucesso!";
+                            this.messageClass = "success";
+                            localStorage.setItem("token", data.token); // Salva o token no localStorage
+                            
+                            // Redireciona para a página home após 2 segundos
+                            setTimeout(() => {
+                                window.location.href = "/home.html";
+                            }, 2000);
+                        } else {
+                            this.message = data.message || "Erro ao fazer login!";
+                            this.messageClass = "error";
+                        }
+                    } catch (error) {
+                        this.message = "Erro ao conectar ao servidor!";
+                        this.messageClass = "error";
+                    }
+                }
+            }
+        });
+
+        app.mount("#app");
+    </script>
 </body>
 </html>
