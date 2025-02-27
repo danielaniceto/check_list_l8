@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <h2>Bem-vindo!</h2>
+        <p>Escolha uma das opções:</p>
+        
+        <button @click="goToChecklist">Fazer Check-list de Veículos</button>
+        <button @click="goToPTE">Preencher PTE (Permissão de Trabalho Especial)</button>
+    </div>
+
+    <script>
+        const app = Vue.createApp({
+            methods: {
+                goToChecklist() {
+                    window.location.href = "checklist.html";
+                },
+                goToPTE() {
+                    window.location.href = "pte.html";
+                }
+            }
+        });
+
+        app.mount("#app");
+    </script>
+</body>
+</html>
