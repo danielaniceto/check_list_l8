@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Veículos</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <h1>Checklist de Veículo</h1>
+
+    <form @submit.prevent="enviarChecklist">
+        <div v-for="(item, index) in checklist" :key="index">
+            <label>{{ item.pergunta }}</label>
+
+            <input v-if="item.tipo === 'texto'" type="text" v-model="item.resposta">
+
+            <div v-else>
+                <label>
+                    <input type="radio" :name="'resposta_' + index" value="OK" v-model="item.resposta"> OK
+                </label>
+                <label>
+                    <input type="radio" :name="'resposta_' + index" value="NÃO OK" v-model="item.resposta"> NÃO OK
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <label>Observações:</label>
+            <textarea v-model="observacoes"></textarea>
+        </div>
+
+        <button type="submit">Enviar Checklist</button>
+    </form>
+
+    <p v-if="mensagem">{{ mensagem }}</p>
+</div>
+
+<script>
+const app = Vue.createApp({
+    data() {
+        return {
+            checklist: [
+                { pergunta: "Qual a placa do Carro?", tipo: "texto", resposta: "" },
+                { pergunta: "Qual seu nome completo?", tipo: "texto", resposta: "" },
+                { pergunta: "Qual trecho você trabalha?", tipo: "texto", resposta: "" },
+                { pergunta: "Qual a data da última manutenção?", tipo: "texto", resposta: "" },
+                { pergunta: "Conservação Geral do Carro", tipo: "opcao", resposta: "" },
+                { pergunta: "O ar condicionado funciona?", tipo: "opcao", resposta: "" },
+                { pergunta: "Você possui o cartão de abastecimento?", tipo: "opcao", resposta: "" },
+                { pergunta: "A chave de ignição está ok?", tipo: "opcao", resposta: "" },
+                { pergunta: "O cinto de segurança está ok?", tipo: "opcao", resposta: "" },
+                { pergunta: "Os faróis e lanternas estão ok?", tipo: "opcao", resposta: "" },
+                { pergunta: "Como está a limpeza do interior do veículo?", tipo: "opcao", resposta: "" },
+                { pergunta: "O parabrisa está ok?", tipo: "opcao", resposta: "" },
+                { pergunta: "Os pneus estão ok?", tipo: "opcao", resposta: "" },
+                { pergunta: "O veículo possui chave de roda?", tipo: "opcao", resposta: "" },
+                { pergunta: "Os retrovisores estão ok?", tipo: "opcao", resposta: "" },
+                { pergunta: "O veículo possui tag do SemParar?", tipo: "opcao", resposta: "" },
+                { pergunta: "Como está o triângulo de sinalização?", tipo: "opcao", resposta: "" },
+                { pergunta: "Qual o estado geral dos vidros do veículo?", tipo: "opcao", resposta: "" },
+                { pergunta: "O veículo possui macaco?", tipo: "opcao", resposta: "" },
+                { pergunta: "Qual o estado do funcionamento geral do veículo?", tipo: "opcao", resposta: "" },
+                { pergunta: "O limpador do para-brisa está ok?", tipo: "opcao", resposta: "" },
+                { pergunta: "O esguicho de água do para-brisa funciona?", tipo: "opcao", resposta: "" },
+                { pergunta: "O rack da escada está em boas condições?", tipo: "opcao", resposta: "" },
+                { pergunta: "Qual o estado geral do veículo?", tipo: "opcao", resposta: "" }
+            ],
+            observacoes: "",
+            mensagem: ""
+        };
+    },
+    methods: {
+        async enviarChecklist() {
+            const placa = this.checklist.find(item => item.pergunta === "Qual a placa do Carro?")?.resposta;
+            const nome = this.checklist.find(item => item.pergunta === "Qual seu nome completo?")?.resposta;
+
+            if (!placa || !nome) {
+                this.mensagem = "Por favor, preencha a placa do carro e seu nome.";
+                return;
+            }
+
+            const payload = {
+                checklist: this.checklist,
+                observacoes: this.observacoes
+            };
+
+            try {
+                const response = await fetch("http://127.0.0.1:8000/checklist", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error("Erro ao enviar checklist.");
+
+                this.mensagem = `Checklist de ${nome} (Placa: ${placa.toUpperCase()}) enviado com sucesso!`;
+            } catch (error) {
+                this.mensagem = "Erro ao enviar checklist.";
+                console.error(error);
+            }
+        }
+    }
+});
+
+app.mount("#app");
+</script>
+
+</body>
+</html>

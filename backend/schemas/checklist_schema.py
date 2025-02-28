@@ -15,9 +15,12 @@ class RequestCheckListModel(BaseModel):
     nome_completo: str
     trecho: str
     data_ultima_manutencao: str
+    hodometro: int
+    nivel_combustivel: str
+    validade_ipva: str
     conservacao_veiculo: str
     ar_condicionado: str
-    cartao_abastecineto: str
+    cartao_abastecimento: str
     chave_ignicao: str
     cinto_seguranca: str
     farol_lanternas: str
