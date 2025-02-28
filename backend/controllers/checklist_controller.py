@@ -1,7 +1,9 @@
 from database.mongo import DataBaseConnection
+from pymongo.collection import Collection
 from uuid import uuid4, UUID
 import logging
 from schemas.checklist_schema import RequestCheckListModel
+import json
 
 logging.basicConfig(
     level=logging.INFO,
@@ -9,7 +11,7 @@ logging.basicConfig(
     handlers=[logging.FileHandler("checklist_controller.log"), logging.StreamHandler()]
 )
 
-SERVICE_DB_CONECTION = DataBaseConnection()["checklis"]
+service_db_conection_check_list = DataBaseConnection.conection_db()["check_list"]
 
 class ChecklistController:
     def __init__(self):
@@ -17,11 +19,11 @@ class ChecklistController:
         logging.info("Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER")
         logging.info("CHECKLISTCONTRLLER iniciada com sucesso")
 
-        if SERVICE_DB_CONECTION is None:
+        if service_db_conection_check_list is None:
             logging.critical("A conexão com banco de dados falhou, RECORDER_CONTROLLER")
             raise ValueError("A conexão com banco falhou") 
     
-    async def create_check_list(data: RequestCheckListModel):
+    async def create_check_list(self, data: RequestCheckListModel):
         identificador = uuid4().hex
 
         campos_check_list = {
@@ -35,7 +37,7 @@ class ChecklistController:
                 "validade_ipva": data.validade_ipva,
                 "conservacao_veiculo": data.conservacao_veiculo,
                 "ar_condicionado": data.ar_condicionado,
-                "cartao_abastecineto": data.cartao_abastecineto,
+                "cartao_abastecimento": data.cartao_abastecimento,
                 "chave_ignicao": data.chave_ignicao,
                 "cinto_seguranca": data.cinto_seguranca,
                 "farol_lanternas": data.farol_lanternas,
@@ -54,4 +56,25 @@ class ChecklistController:
                 "rack_escada": data.rack_escada,
                 "estado_geral": data.estado_geral,
                 "descricao_varias": data.descricao_varias
-                    }
+            }
+        
+        try:
+            with open("checklist.json", "w") as file:
+                json.dump(campos_check_list, file, ensure_ascii=False, indent=4)
+            logging.info("Checklist salvo localmente como JSON.")
+
+            return self.insert_check_list_db(campos_check_list)
+        
+        except Exception as error:
+                logging.error(f"Erro ao processar checklist: {str(error)}")
+                return {"erro": f"Erro ao processar checklist: {str(error)}"}
+    
+    def insert_check_list_db(self, campos_check_list: RequestCheckListModel):
+        try:
+            service_db_conection_check_list.insert_one(campos_check_list)
+            logging.info("Checklist inserido com sucesso no banco de dados")
+            return {"mensagem": "Checklist inserido com sucesso no banco de dados"}
+        
+        except Exception as error:
+            logging.error(f"Erro ao inserir checklist no banco de dados: {str(error)}")
+            return {"erro": f"Erro ao inserir checklist no banco de dados: {str(error)}"}
