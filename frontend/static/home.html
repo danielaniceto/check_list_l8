@@ -2,29 +2,75 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
 
+        h2 {
+            color: #333;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-btn {
+            margin-top: 20px;
+            background-color: red;
+        }
+
+        .logout-btn:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
 <body>
     <div id="app">
-        <h2>Bem-vindo!</h2>
-        <p>Escolha uma das opções:</p>
+        <h2>Bem-vindo à Página Inicial</h2>
+        <p>Escolha uma opção abaixo:</p>
         
-        <button @click="goToChecklist">Fazer Check-list de Veículos</button>
-        <button @click="goToPTE">Preencher PTE (Permissão de Trabalho Especial)</button>
+        <div class="btn-container">
+            <a href="/checklist.html" class="btn">Fazer Check-list-Veiculo</a>
+            <a href="/pte.html" class="btn">Fazer-PTE</a>
+        </div>
+
+        <button @click="logout" class="btn logout-btn">Sair</button>
     </div>
 
     <script>
         const app = Vue.createApp({
+            mounted() {
+                if (!localStorage.getItem("token")) {
+                    window.location.href = "/login.html";
+                }
+            },
             methods: {
-                goToChecklist() {
-                    window.location.href = "checklist.html";
-                },
-                goToPTE() {
-                    window.location.href = "pte.html";
+                logout() {
+                    localStorage.removeItem("token");
+                    window.location.href = "/login.html";
                 }
             }
         });
