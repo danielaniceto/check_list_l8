@@ -4,7 +4,7 @@ from controllers.login_controller import LoginValidation
 from controllers.checklist_controller import ChecklistController
 from controllers.home_controller import HomeController
 from schemas.login_schema import RequestUserModel
-from schemas.checklist_schema import RequestCheckListModel
+from schemas.checklist_schema import RequestCheckListModel, RequestPte
 import json
 
 app = FastAPI()
@@ -24,3 +24,7 @@ async def rota_home():
 @app.post("/checklist")
 async def create_check_list(data: RequestCheckListModel):
     return JSONResponse(content = await check_list_controller.create_check_list(data), status_code=201)
+
+@app.post("/pte")
+async def create_pte(data: RequestPte):
+    return JSONResponse(content = await check_list_controller.create_pte(data), status_code=201)
