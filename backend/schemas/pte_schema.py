@@ -3,13 +3,17 @@ from typing import List
 from uuid import uuid4
 from pydantic import BaseModel
 import logging
-from schemas.checklist_schema import LiberacaoAtividadeModel
+from schemas.pte_schema import LiberacaoAtividadeModel
 
 logging.basicConfig(
     level=logging.INFO,
     format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers = [logging.FileHandler("pte_controller.log"), logging.StreamHandler()]
 )
+
+class LiberacaoAtividadeModel(BaseModel):
+    emitente: str
+    responsavel_equipe: str
 
 class RequestPte(BaseModel):
     request_id_pte: str = uuid4().hex

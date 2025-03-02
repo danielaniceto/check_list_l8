@@ -15,13 +15,13 @@ class DataBaseConnection():
             logging.info("Conectando ao Banco de Dados, MONGODB")
 
             client = MongoClient(url_conection_db, serverSelectionTimeoutMS=50000)
-            db = client["dbtest"]
+            database_l8 = client["projetoL8"]
             logging.info(f"Conectado com sucesso ao banco de dados, MONGODB")
 
             client.admin.command("ping")
             logging.info("Conexão feita com sucesso, MONGODB!!!")
 
-            return db
+            return database_l8
         
         except errors.ServerSelectionTimeoutError:
             logging.error("Erro: Não foi possível conectar ao MongoDB, verifique a string de conexão ou a disponibilidade do servidor.")
