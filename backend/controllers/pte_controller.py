@@ -67,3 +67,4 @@ class PteController:
         except Exception as error:
             logging.error(f"Erro ao inserir PTE no banco de dados: {error}")
             return {f"Erro ao inserir PTE no banco de dados: {error}"}
+        
