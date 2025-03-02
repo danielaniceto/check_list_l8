@@ -3,7 +3,6 @@ from typing import List
 from uuid import uuid4
 from pydantic import BaseModel
 import logging
-from schemas.checklist_schema import LiberacaoAtividadeModel
 
 logging.basicConfig(
     level=logging.INFO,
