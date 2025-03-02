@@ -7,10 +7,10 @@ import logging
 logging.basicConfig(
     level=logging.INFO,
     format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers = [logging.FileHandler("checklist_controller.log"), logging.StreamHandler()]
+    handlers = [logging.FileHandler("checklist_schema.log"), logging.StreamHandler()]
 )
 
-class RequestCheckListModel(BaseModel):
+class RequestCheckListModelSchema(BaseModel):
     request_id_check_list: str = uuid4().hex
     placa_carro: str
     nome_completo: str
@@ -40,7 +40,3 @@ class RequestCheckListModel(BaseModel):
     rack_escada: str
     estado_geral: str
     descricao_varias: str
-
-
-    
-    

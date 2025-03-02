@@ -3,7 +3,7 @@ import logging
 logging.basicConfig(
     level=logging.INFO,
     format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers = [logging.FileHandler("api_controller.log"), logging.StreamHandler()]
+    handlers = [logging.FileHandler("login_schema.log"), logging.StreamHandler()]
 )
 
 class RequestUserModel():
