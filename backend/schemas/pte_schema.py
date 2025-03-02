@@ -8,17 +8,17 @@ from schemas.pte_schema import LiberacaoAtividadeModel
 logging.basicConfig(
     level=logging.INFO,
     format = "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
-    handlers = [logging.FileHandler("pte_controller.log"), logging.StreamHandler()]
+    handlers = [logging.FileHandler("pte_schema.log"), logging.StreamHandler()]
 )
 
 class LiberacaoAtividadeModel(BaseModel):
     emitente: str
     responsavel_equipe: str
 
-class RequestPte(BaseModel):
+class RequestPteModelSchema(BaseModel):
     request_id_pte: str = uuid4().hex
     validade: datetime
-    atividate: datetime
+    atividade: datetime
     hora_abertura: datetime
     hora_fechamento: datetime
     local_trabalho: str

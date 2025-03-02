@@ -9,7 +9,7 @@ class LiberacaoAtividadeModel(BaseModel):
     emitente: str
     responsavel_equipe: str
 
-class PteModel(BaseModel):
+class RequestPteModel(BaseModel):
     request_id_pte: str = uuid4().hex
     validade: datetime
     atividate: datetime

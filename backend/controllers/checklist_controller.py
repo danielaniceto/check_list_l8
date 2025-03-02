@@ -1,8 +1,8 @@
 from database.mongo import DataBaseConnection
-from pymongo.collection import Collection
-from uuid import uuid4, UUID
+from models.db_checklist_model import RequestCheckListModel
+from uuid import uuid4
 import logging
-from schemas.checklist_schema import RequestCheckListModel
+from schemas.checklist_schema import RequestCheckListModelSchema
 import json
 
 logging.basicConfig(
@@ -23,7 +23,7 @@ class ChecklistController:
             logging.critical("A conexão com banco de dados falhou, RECORDER_CONTROLLER")
             raise ValueError("A conexão com banco falhou") 
     
-    async def create_check_list(self, data: RequestCheckListModel):
+    async def create_check_list(self, data: RequestCheckListModelSchema):
         identificador = uuid4().hex
 
         campos_check_list = {
