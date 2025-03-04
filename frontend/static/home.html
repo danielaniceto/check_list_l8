@@ -60,22 +60,6 @@
         <button @click="logout" class="btn logout-btn">Sair</button>
     </div>
 
-    <script>
-        const app = Vue.createApp({
-            mounted() {
-                if (!localStorage.getItem("token")) {
-                    window.location.href = "/login.html";
-                }
-            },
-            methods: {
-                logout() {
-                    localStorage.removeItem("token");
-                    window.location.href = "/login.html";
-                }
-            }
-        });
-
-        app.mount("#app");
-    </script>
+    <script src="home.js"></script> <!-- Referência para o arquivo home.js -->
 </body>
 </html>
