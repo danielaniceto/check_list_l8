@@ -16,11 +16,11 @@ home_controller = HomeController()
 pte_controller = PteController()
 
 @app.post("/login")
-async def rota_login(user: RequestUserModelSchema):
+async def login(user: RequestUserModelSchema):
     return JSONResponse(content= await login_controller.login_validate(user), status_code=200)
 
 @app.get("/home")
-async def rota_home():
+async def home():
     return JSONResponse(content= await home_controller.home(), status_code=200)
 
 @app.post("/checklist")
