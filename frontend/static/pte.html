@@ -4,158 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PTE - Permissão de Trabalho Especial</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-    <h2>PERMISSÃO DE TRABALHO ESPECIAL</h2>
-    <label>PTE Número: <input type="text" name="pte_numero" value="000001"></label>
-    <label>Validade: <input type="date" name="validade"></label>
-    
-    <h3>Atividade</h3>
-    <label><input type="checkbox" name="atividade" value="altura"> Trabalhos em Altura superior a 2 metros</label>
-    <label><input type="checkbox" name="atividade" value="eletrica"> Trabalho com Energia Elétrica</label>
-    <label><input type="checkbox" name="atividade" value="abastecimento"> Abastecimento de Geradores</label>
-    
-    <h3>Informações Gerais</h3>
-    <label>Data Abertura: <input type="date" name="data_abertura"></label>
-    <label>Hora Abertura: <input type="time" name="hora_abertura"></label>
-    <label>Hora Fechamento: <input type="time" name="hora_fechamento"></label>
-    <br>
-    <label>Local de Trabalho: <input type="text" name="local_trabalho"></label>
-    <label>Trabalho Autorizado: <input type="radio" name="autorizado" value="sim"> Sim <input type="radio" name="autorizado" value="nao"> Não</label>
-    
-    <h3>Riscos Potenciais</h3>
-    <label><input type="checkbox" name="riscos" value="animais"> Animais Peçonhentos</label>
-    <label><input type="checkbox" name="riscos" value="quimicos"> Exposição a Produtos Químicos</label>
-    <label><input type="checkbox" name="riscos" value="incendio"> Incêndio ou Explosão</label>
-    <label><input type="checkbox" name="riscos" value="cortes"> Cortes</label>
-    <label><input type="checkbox" name="riscos" value="atropelamento"> Atropelamento</label>
-    <label><input type="checkbox" name="riscos" value="prensamento"> Prensamento</label>
-    <label><input type="checkbox" name="riscos" value="choque_eletrico"> Choque Elétrico</label>
-    <label><input type="checkbox" name="riscos" value="contato_com_superficies_quentes"> Contato com Superfícies Quentes</label>
-    <label><input type="checkbox" name="riscos" value="esforço_fisico_intenso"> Esforço Físico Intenso</label>
-    <label><input type="checkbox" name="riscos" value="exposicao_ruidos"> Exposição a Ruídos</label>
-    <label><input type="checkbox" name="riscos" value="iluminacao_inadequada"> Iluminação Inadequada</label>
-    <label><input type="checkbox" name="riscos" value="queda_diferença_nivel"> Queda em Diferença de Nível</label>
-    <label><input type="checkbox" name="riscos" value="impacto_pessoa_contra_objetos"> Impacto de Pessoa contra Objetos</label>
-    <label><input type="checkbox" name="riscos" value="queda_projecao_objetos"> Queda ou Projeção de Objetos</label>
-    <label>Outros: <input type="text" name="Outros"></label>
-   
-    <h3>Equipamentos ou Produtos Utilizados</h3>
-    <label><input type="checkbox" name="equipamentos" value="andaimes"> Andaimes</label>
-    <label><input type="checkbox" name="equipamentos" value="caminhao"> Caminhão</label>
-    <label><input type="checkbox" name="equipamentos" value="escada"> Escada Extensível</label>
-    <label><input type="checkbox" name="equipamentos" value="ferramentas_manuais"> Ferramentas Manuais</label>
-    <label><input type="checkbox" name="equipamentos" value="guindaste"> Guindaste/Guindauto</label>
-    <label><input type="checkbox" name="equipamentos" value="lixadeiras_parafusadeiras_furadeiras"> Lixadeira/Parafusadeira/Furadeira</label>
-    <label><input type="checkbox" name="equipamentos" value="cesto_aereo"> Plataforma/Cesto Aéreo</label>
-    <label>Outros: <input type="text" name="Outros"></label>
-    
-    <h3>Precauções para Trabalho em Altura</h3>
-    <label><input type="checkbox" name="riscos" value="andaimes"> Andaime possui guarda corpo, piso, rodapé travas?</label>
-    <label><input type="checkbox" name="riscos" value="queda_objetos"> Avaliar risco de queda de objetos sobre pessoas</label>
-    <label><input type="checkbox" name="riscos" value="pare_e_siga"> Bandeira PARE e SIGA ?</label>
-    <label><input type="checkbox" name="riscos" value="escadas"> As escadas estão em bom estado ?</label>
-    <label><input type="checkbox" name="riscos" value="cabos_guias"> Instalar cabos guias e trava quedas nos andaimes e torres</label>
-    <label><input type="checkbox" name="riscos" value="passarelas"> Instalar passarela sobre o telhado</label>
-    <label><input type="checkbox" name="riscos" value="sinalizacao_altura"> Isolar e sinalizar a área de trabalho e abaixo dela</label>
-    <label><input type="checkbox" name="riscos" value="ferramentas"> Manter as ferramentas em uso sempre amarradas</label>
-    <label><input type="checkbox" name="riscos" value="plataforma_elevatoria"> Plataforma elevatória: O Operador e certificado?</label>
-    <label><input type="checkbox" name="riscos" value="guarda_corpo"> Verificar instalação de guardo corpo</label>
-    <label>Outros: <input type="text" name="Outros"></label>
+    <div id="app">
+        <h2>PERMISSÃO DE TRABALHO ESPECIAL</h2>
+        <form @submit.prevent="submitForm">
 
-    <h3>Precauções para Trabalhos com Energia Elétrica</h3>
-    <label><input type="checkbox" name="riscos" value="circuito_eletrico"> Todo o circuito elétrico foi Anulado/Checado/Testado?</label>
-    <label>Dector de Tensão Elétrica, Teste Inicial: <input type="text" name="dectetor_tensao_inicial"></label>
-    <label>Dector de Tensão Elétrica, Teste Final: <input type="text" name="dectetor_tensao_final"></label>
-    <label><input type="checkbox" name="riscos" value="seccionadoras"> Manter seccionadoras abertas</label>
-    <label><input type="checkbox" name="riscos" value="vestimenta_nr10"> Vestimentas adequadas para eletricidade, Antichamas NR10</label>
-    <label><input type="checkbox" name="riscos" value="sinalizacao_eletrica"> Isolar e sinalizar a área com cones e fitas</label>  
-    <label><input type="checkbox" name="riscos" value="cadeados"> Utilizar cadeado e identificação para bloqueio do circuito</label>
-    <label><input type="checkbox" name="riscos" value="inspecao_ferramentas"> Conferir ferramentas antes e depois dos trab. da atividade manual</label>
-    <label><input type="checkbox" name="riscos" value="adornos"> Proibido o uso de adorno e lentes de contato</label>
-    <label><input type="checkbox" name="riscos" value="umidade"> O ambiente está livre de umidade ?</label>
-    <label><input type="checkbox" name="riscos" value="art_andaime _plataforma"> Andaime plataforma possui projeto e ART?</label>
-    <label>Outros: <input type="text" name="Outros"></label>
+            <fieldset>
+                <legend>Identificação</legend>
+                <label>PTE Número: <input type="text" v-model.trim="formData.pte_numero" required></label>
+                <label>Validade: <input type="date" v-model="formData.validade"></label>
+            </fieldset>
 
-    <h3>Precauções para Abastecimento de Geradores</h3>
-    <label><input type="checkbox" name="riscos" value="vazamento_tanque"> Verificar o tanque e se entorno, identificando vazamentos</label>
-    <label><input type="checkbox" name="riscos" value="bomba_eletrica"> Usar bomba elétrica de transferência de combustíveis</label>
-    <label><input type="checkbox" name="riscos" value="sinalizacao_abastecimento"> Isolar área de trabalho </label>
-    <label><input type="checkbox" name="riscos" value="certificado_nr20"> Funcionário treinamento em NR20?</label>
-    <label><input type="checkbox" name="riscos" value="kit_abastecimento"> Fazer uso do kit para abastecimento dos geradores</label>
-    <label><input type="checkbox" name="riscos" value="aguardar_5min"> Antes de entrar no ambiente, abrir a porta e aguardar 5 minutos</label>
-    <label>Outros: <input type="text" name="Outros"></label>
+            <fieldset>
+                <legend>Atividades PTE</legend>
+                <h3>Atividade</h3>
+                <label v-for="(atividade, index) in atividades" :key="index">
+                    <input type="checkbox" v-model="formData.atividades" :value="atividade"> {{ atividade }}
+                </label>
+            </fieldset>
 
-    <h3>Equipamentos de Proteção Individuais EPIs</h3>
-    <label><input type="checkbox" name="epi" value="avental_raspa"> Avental de Raspa</label>
-    <label><input type="checkbox" name="epi" value="avental_pvc"> Avental de PVC</label>
-    <label><input type="checkbox" name="epi" value="botina_couro"> Botina de Segurança Couro</label>
-    <label><input type="checkbox" name="epi" value="bota_borracha"> Bota de Borracha</label>
-    <label><input type="checkbox" name="epi" value="capacete_paraquesdista"> Capacete Paraquedista</label>
-    <label><input type="checkbox" name="epi" value="colete_reflativo"> Colete com Faixas Refletivas</label>
-    <label><input type="checkbox" name="epi" value="mascara_descartavel"> Mascara com Filtro Descatável</label>
-    <label><input type="checkbox" name="epi" value="conjunto_impermeavel"> Conjunto Impermeável</label>
-    <label><input type="checkbox" name="epi" value="cordas_NR18"> Cordas para Trabalho em Altura</label>
-    <label><input type="checkbox" name="epi" value="luva_tensao"> Luvas para Alta Tensão</label>
-    <label><input type="checkbox" name="epi" value="luva_nitrilica"> Luvas tipo Nitrílica</label>
-    <label><input type="checkbox" name="epi" value="luva_latex"> Luvas Látex</label>
-    <label><input type="checkbox" name="epi" value="luva_pvc"> Luvas PVC</label>
-    <label><input type="checkbox" name="epi" value="luva_raspa_vaqueta"> Luvas de Raspa ou Vaqueta</label>
-    <label><input type="checkbox" name="epi" value="mascara_filtro"> Máscara com Filtro Permanente</label>
-    <label><input type="checkbox" name="epi" value="perneira"> Perneira de Segurança</label>
-    <label><input type="checkbox" name="epi" value="proteror_auricular"> Protetor Auricular</label>
-    <label><input type="checkbox" name="epi" value="uniforme_nr10"> Uniforma para Trabalhos Eletricos NR10</label>
-    <label><input type="checkbox" name="epi" value="luva_tensao"> Luvas para Alta Tensão</label>
-    <label><input type="checkbox" name="epi" value="cinto_seguranca"> Cinto de Segurança Tipo Paraquedista, 5 pontos de Ancoragem</label>
-    <label><input type="checkbox" name="epi" value="trava_quedas_corda"> Trava Quedas para Cordas 12mm</label>
-    <label><input type="checkbox" name="epi" value="trava_quedas_caboaco"> Trava Quedas para Cabos de Aço</label>
-    <label><input type="checkbox" name="epi" value="oculos_seguranca"> Óculos de Segurança</label>
-    <label><input type="checkbox" name="epi" value="capacete"> Capacete com Proteção Auditiva ou Facial</label>
-    <label>Outros: <input type="text" name="Outros"></label>
+            <fieldset>
+                <legend>Informações Gerais</legend>
+                <label>Data Abertura: <input type="date" v-model="formData.data_abertura"></label>
+                <label>Hora Abertura: <input type="time" v-model="formData.hora_abertura"></label>
+                <label>Hora Fechamento: <input type="time" v-model="formData.hora_fechamento"></label>
+                <label>Local de Trabalho: <input type="text" v-model="formData.local_trabalho"></label>
+                <label>Trabalho Autorizado:</label>
+                <input type="radio" v-model="formData.autorizado" value="sim" name="autorizado"> Sim
+                <input type="radio" v-model="formData.autorizado" value="nao" name="autorizado"> Não
+            </fieldset>
 
-    <h3>Equipamentos de Proteção Coletiva EPCs</h3>
-    <label><input type="checkbox" name="epc" value="cones"> Cones de Sinalização</label>
-    <label><input type="checkbox" name="epc" value="fita_zebrada"> Fita Zebrada</label>
-    <label><input type="checkbox" name="epc" value="bandeiras"> Bandeiras</label>
-    <label><input type="checkbox" name="epc" value="placa_sinalizacao"> Placas de Sinalização</label>
-    <label><input type="checkbox" name="epc" value="extintores"> Extintores</label>
-    <label>Outros: <input type="text" name="Outros"></label>
+            <fieldset>
+                <legend>Riscos Potenciais</legend>
+                <label v-for="(risco, index) in riscos" :key="index">
+                    <input type="checkbox" v-model="formData.riscos" :value="risco"> {{ risco }}
+                </label>
+                <label>Outros Riscos: <input type="text" v-model="formData.outros_riscos"></label>
+            </fieldset>
 
-    <h3>Aspectos Ambientais</h3>
-    <label><input type="checkbox" name="asp_ambientais" value="armazenamento_residuos"> Armazenamento de resíduos sólidos ou líquidos</label>
-    <label><input type="checkbox" name="asp_ambientais" value="efluentes_sanitarios"> Geração de efluentes sanitários e contaminados</label>
-    <label><input type="checkbox" name="asp_ambientais" value="recursos_renovaveis"> Consumo de recursos naturais renováveis ou não renováveis</label>
-    <label><input type="checkbox" name="asp_ambientais" value="consumo_quimicos"> Consumo de produtos químicos</label>
-    <label><input type="checkbox" name="asp_ambientais" value="geracao_residuos"> Geração de resíduos Classe I ou II</label>
-    <label><input type="checkbox" name="asp_ambientais" value="consumo_agua"> Consumo de água</label>
-    <label><input type="checkbox" name="asp_ambientais" value="consumo_energia"> Consumo de energia elétrica</label>
-    <label><input type="checkbox" name="asp_ambientais" value="consumo_combustiveis"> Consumo de combustíveis</label>
-    <label>Outros: <input type="text" name="Outros"></label>
+            <fieldset>
+                <legend>Equipamentos ou Produtos Utilizados</legend>
+                <label v-for="(equipamento, index) in equipamentos" :key="index">
+                    <input type="checkbox" v-model="formData.equipamentos" :value="equipamento"> {{ equipamento }}
+                </label>
 
-    <h3>Requisitos Gerais Obrigatórios para Início das Atividades</h3>
-    <p>01 - Todo trabalhador deve passar pela integração de segurança antes de iniciar suas atividades.</p>
-    <p>02 - A empresa deve entregar toda a documentação solicitada antes de desligar qualquer trabalhador das atividades.</p>
-    <p>03 - Permitida a execução somente das atividades especificas descritas nesta autorização.</p>
-    <p>04 - Caso ocorra alteração de atividade, ou seja, identificado risco adicional e/ou possibilidade de danos ambientas, paralisar as atividades e solicitar revisão da análise de risco.</p>
-    <p>05 - E responsabilidade da contratada/executante cumprir com todas as orientações constantes nessa PTE.</p>
-    <p>06 - Durante a execução de atividades a serviços da contratante, todos os funcionários deverão estar portando crachá ou documento próprio de identificação com foto.</p>
-    <p>07 - E proibido o transporte de funcionários nas carrocerias de caminhões, também está vetado o transporte de funcionários sobre máquinas e equipamentos, devendo estar sempre sobre os mesmos somente os operadores.</p>
-    <p>08 - Durante o tempo deve haver a supervisão da empresa contratada ou do setor contratante, sendo vetado o trabalho de forma isolada ou individual.</p>
-    <p>09 - Realizar o serviço com calma e atenção, inspecionar os equipamentos e os EPIs antes de iniciar as atividades, inspecionar os EPCs e estruturas antes e durante as atividades .</p>
-    <p>10 - Paralisar a atividade imediatamente em caso de chuvas, ventos fortes ou outra condição climática adversa, bem como respeitar o horário estabelecido nesta permissão de trabalhos especiais.</p>
-    <p>11 - Em caso de qualquer  emergência, entra em contato com o CCO, para que seja providenciado o atendimento adequado.</p>
-    <p>12 - Durante a execução de atividades a serviço da contratante e vetada a utilização de fogo e de processos químicos para todas as formas de intervenção na vegetação nativa, além da utilização, perseguição, destruição, caça ou apanha de animais silvestres em locais onde houver nidificação.</p>
-    <p>13 - Após  terminar as atividades, comunicar o gestor responsável.</p>
-    
-    <h3>Liberação dos Trabalhos</h3>
-    <label>Emitente: <input type="text" name="emitente"></label>
-    
-    <h3>Reabertura da PTE</h3>
-    <label>Nome do Responsável: <input type="text" name="responsavel"></label>
-    <label>Data Abertura: <input type="date" name="data_reabertura"></label>
-    <label>Hora Abertura: <input type="time" name="hora_reabertura"></label>
-    
-    <br>
-    <button type="submit">Enviar</button>
+                <label>Outros Equipamentos Utilizados: <input type="text" v-model="formData.outros_equipamentos"></label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Precauções para Trabalho em Altura</legend>
+                <div v-for="(altura, index) in trabalho_altura" :key="index">
+                    <label>
+                        <input type="checkbox" v-model="formData.trabalho_altura" :value="altura"> {{ altura }}
+                    </label>
+                </div>
+            
+                <label>Outros: <input type="text" v-model="formData.outros_trabalho_altura"></label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Precauções para Trabalhos com Energia Elétrica</legend>
+                <div v-for="(energia, index) in trabalho_energia" :key="index">
+                    <label>
+                        <input type="checkbox" v-model="formData.trabalho_energia" :value="energia"> {{ energia }}
+                    </label>
+                </div>
+            
+                <label>Outras Precaucões para Trabalho em Altura: <input type="text" v-model="formData.outros_trabalho_energia"></label>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Precauções para Abastecimento de Geradores</legend>
+                <div v-for="(abastecimento, index) in abastecimento_geradores" :key="index">
+                    <label>
+                        <input type="checkbox" v-model="formData.abastecimento_geradores" :value="abastecimento"> {{ abastecimento }}
+                    </label>
+                </div>
+            
+                <label>Outras Precauções para Abastecimento de Geradores: <input type="text" v-model="formData.outros_abastecimento_geradores"></label>
+            </fieldset>
+
+            <button type="submit" :disabled="!formData.pte_numero || !formData.pte_numero.trim()">Enviar</button>
+
+        </form>
+    </div>
+
+    <script src="pte.js"></script>
 </body>
 </html>
