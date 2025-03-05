@@ -1,4 +1,5 @@
 import logging
+from pydantic import BaseModel
 
 logging.basicConfig(
     level=logging.INFO,
@@ -6,7 +7,7 @@ logging.basicConfig(
     handlers = [logging.FileHandler("login_schema.log"), logging.StreamHandler()]
 )
 
-class RequestUserModelSchema():
+class RequestUserModelSchema(BaseModel):
     def __init__(self, email: str, password: str):
         self.email = email
         self.password = password
