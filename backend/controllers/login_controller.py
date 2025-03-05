@@ -20,12 +20,13 @@ class LoginValidation:
             raise ValueError("A conexão com banco falhou")
         
     def hash_password(self, password: str):
+        
         #Criptografa a senha usando SHA-256.
         return hashlib.sha256(password.encode()).hexdigest()
        
     async def login_validate(self, user: RequestUserModelSchema):
 
-        #buscando usuário por email no banco de dados
+        #buscando usuário por email no banco
         seach_db_user = service_db_conection_users.find_one({"email": user.email})
 
         #verificando se o usuário existe e se a senha está correta
