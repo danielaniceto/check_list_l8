@@ -15,6 +15,10 @@ check_list_controller = ChecklistController()
 home_controller = HomeController()
 pte_controller = PteController()
 
+@app.get("/")
+def principal_rote():
+    return "Rota Principal"
+
 @app.post("/login")
 async def login(user: RequestUserModelSchema):
     return JSONResponse(content= await login_controller.login_validate(user), status_code=200)

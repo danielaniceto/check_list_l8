@@ -1,5 +1,5 @@
 import logging
-from schemas.login_schema import RequestUserModel
+from schemas.login_schema import RequestUserModelSchema
 from database.mongo import DataBaseConnection
 from pymongo import MongoClient
 import hashlib
@@ -10,7 +10,7 @@ logging.basicConfig(
     handlers=[logging.FileHandler("checklist_controller.log"), logging.StreamHandler()]
 )
 
-service_db_conection_users = DataBaseConnection()["users"]
+service_db_conection_users = DataBaseConnection.conection_db()["users"]
 
 class LoginValidation:
     def __init__(self):
@@ -23,7 +23,7 @@ class LoginValidation:
         #Criptografa a senha usando SHA-256.
         return hashlib.sha256(password.encode()).hexdigest()
        
-    async def login_validate(self, user: RequestUserModel):
+    async def login_validate(self, user: RequestUserModelSchema):
 
         #buscando usuário por email no banco de dados
         seach_db_user = service_db_conection_users.find_one({"email": user.email})
@@ -36,3 +36,4 @@ class LoginValidation:
             return {"Senha incorreta!!!"}
         
         return {"Usuário logado com sucesso!!!"}
+    
