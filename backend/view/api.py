@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from controllers.login_controller import LoginValidation
@@ -30,7 +30,12 @@ def principal_rote():
 
 @app.post("/login")
 async def login(user: RequestUserModelSchema):
-    return JSONResponse(content= await login_controller.login_validate(user), status_code=200)
+    result = await login_controller.login_validate(user)
+
+    if "error" in result:
+        raise HTTPException(status_code=400, detail=result["error"])
+    
+    return result
 
 @app.get("/home")
 async def home():

@@ -1,0 +1,26 @@
+2025-03-07 01:32:26,481 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-07 01:32:30,640 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-07 01:32:32,195 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-07 01:32:50,110 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-07 01:32:54,190 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-07 01:32:55,652 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-07 01:33:51,086 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-07 01:33:55,196 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-07 01:33:56,876 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-07 01:33:57,056 - root - INFO - Usuário teste@example.com registrado com sucesso.
+2025-03-07 01:35:33,415 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-07 01:35:37,523 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-07 01:35:39,045 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-07 01:35:39,198 - root - INFO - Usuário teste@exampleemail.com registrado com sucesso.
+2025-03-07 01:37:18,148 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-07 01:37:22,299 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-07 01:37:23,831 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-07 01:37:24,001 - root - INFO - Usuário usuarioteste@exampleemail.com registrado com sucesso.
+2025-03-07 01:39:16,109 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-07 01:39:20,214 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-07 01:39:21,739 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-07 01:39:21,893 - root - INFO - Usuário usuarioteste@exampleemail.com registrado com sucesso.
+2025-03-07 01:41:54,786 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-07 01:41:58,891 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-07 01:42:15,772 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-07 01:42:15,939 - root - ERROR - Usuário usuarioteste@exampleemail.com já registrado.
