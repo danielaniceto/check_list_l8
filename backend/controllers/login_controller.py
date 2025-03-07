@@ -1,7 +1,6 @@
 import logging
 from schemas.login_schema import RequestUserModelSchema
 from database.mongo import DataBaseConnection
-from pymongo import MongoClient
 import hashlib
 
 logging.basicConfig(
@@ -31,10 +30,10 @@ class LoginValidation:
 
         #verificando se o usuário existe e se a senha está correta
         if seach_db_user is None:
-            return{f"Usuário {seach_db_user} não encontrado no banco de dados!!!"}
+            return{"error": f"Usuário {user.email} não encontrado no banco de dados!!!"}
         
         elif self.hash_password(user.password) != seach_db_user["password"]:
-            return {"Senha incorreta!!!"}
+            return {"error": "Senha incorreta!!!"}
         
-        return {"Usuário logado com sucesso!!!"}
+        return {"error": "Senha incorreta!!!"}
     
