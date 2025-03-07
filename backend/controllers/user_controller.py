@@ -1,7 +1,7 @@
 import logging
 from hashlib import sha256
 from backend.database.mongo import DataBaseConnection
-from schemas.login_schema import RequestUserModelSchema
+from backend.schemas.login_schema import RequestUserModelSchema
 
 logging.basicConfig(
     level=logging.INFO,
@@ -18,15 +18,21 @@ class RegisterUserController:
             logging.critical("A conexão com banco de dados falhou, USER_CONTROLLER")
             raise ValueError("A conexão com banco falhou")
 
-    def hash_password(password):
+    def hash_password(self, password: str)-> str:
         return sha256(password.encode()).hexdigest()
 
-    async def regiter_user(self, user: RequestUserModelSchema):
+    async def register_user(self, user: RequestUserModelSchema):
+        existing_user = service_db_conection_users.find_one({"email": user.email})
+
+        if existing_user:
+            logging.error(f"Usuário {user.email} já registrado.")
+            return {"error": "Usuário já registrado."}
+
         hashed_password = self.hash_password(user.password)
 
         user_data = {
-            "email": "usuario@example.com",
-            "password": hashed_password("1234")
+            "email": user.email,
+            "password": hashed_password
         }
 
         result = service_db_conection_users.insert_one(user_data)
