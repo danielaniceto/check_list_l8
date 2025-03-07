@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from controllers.login_controller import LoginValidation
 from controllers.checklist_controller import ChecklistController
 from controllers.home_controller import HomeController
@@ -14,6 +15,14 @@ login_controller = LoginValidation()
 check_list_controller = ChecklistController()
 home_controller = HomeController()
 pte_controller = PteController()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],  # Permite todos os métodos (GET, POST, DELETE, PUTH)
+    allow_headers=["*"],  # Permite todos os headers
+)
 
 @app.get("/")
 def principal_rote():
