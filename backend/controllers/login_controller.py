@@ -1,4 +1,6 @@
 import logging
+import jwt
+import datetime
 from schemas.login_schema import RequestUserModelSchema
 from database.mongo import DataBaseConnection
 import hashlib
@@ -10,6 +12,7 @@ logging.basicConfig(
     handlers=[logging.FileHandler("checklist_controller.log"), logging.StreamHandler()]
 )
 
+SECRET_KEY = "ProjetoL8Checklist"
 service_db_conection_users = DataBaseConnection.conection_db()["users"]
 
 class LoginValidation:
@@ -34,7 +37,12 @@ class LoginValidation:
         if self.hash_password(user.password) != seach_db_user["password"]:
             raise HTTPException(status_code=401, detail="Senha incorreta!!!")
         
+        # **Gerando o token JWT**
+        payload = {
+            "sub": user.email,
+            "exp": datetime.datetime.utcnow() + datetime.timedelta(hours=1)  # Expira em 1 hora
+        }
+        token = jwt.encode(payload, SECRET_KEY, algorithm="HS256")
+        
         # Se chegou aqui, significa que as credenciais estão corretas
-        return {"message": "Login bem-sucedido!"}
-
-    
+        return {"message": "Login bem-sucedido!", "token": token}
