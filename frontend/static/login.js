@@ -12,26 +12,23 @@ const app = Vue.createApp({
             try {
                 const response = await fetch("http://127.0.0.1:8000/login", {
                     method: "POST",
-                    headers: { 
-                        "Content-Type": "application/json"
-                    },
-
+                    headers: {"Content-Type": "application/json"},
                     body: JSON.stringify({ email: this.email, password: this.password })
                 });
 
                 const data = await response.json();
 
-                if (response.ok) {
+                if (data.token) {  // Se o token for recebido, login foi bem-sucedido
                     this.message = "Login realizado com sucesso!";
                     this.messageClass = "success";
-                    localStorage.setItem("token", data.token); // Salvar o token no localStorage
                     
-                    // Redireciona para a página home após 2 segundos
+                    sessionStorage.setItem("token", data.token); // Salva o token
+
                     setTimeout(() => {
-                        window.location.href = "home.html";
-                    }, 2000);
+                        window.location.href = "home.html"; // Redireciona após 1,5s
+                    }, 1500);
                 } else {
-                    this.message = data.message || "Erro ao fazer login!";
+                    this.message = data.detail || "Erro ao realizar login!";
                     this.messageClass = "error";
                 }
             } catch (error) {

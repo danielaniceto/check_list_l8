@@ -41,11 +41,11 @@ const app = Vue.createApp({
                 return;
             }
 
-            const placaRegex = /^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$/;//mercosul
-            const placaAntigaRegex = /^[A-Z]{3}-[0-9]{4}$/;//placa antiga
+            const placaRegex = /^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$/; // Mercosul
+            const placaAntigaRegex = /^[A-Z]{3}-[0-9]{4}$/; // Placa antiga
 
-            if(!placaRegex.test(placa.toUpperCase()) && !placaAntigaRegex.test(placa.toUpperCase())) {
-                this.mensagem = "Por favor, insira uma placa válida";
+            if (!placaRegex.test(placa.toUpperCase()) && !placaAntigaRegex.test(placa.toUpperCase())) {
+                this.mensagem = "Por favor, insira uma placa válida.";
                 return;
             }
 
@@ -55,10 +55,14 @@ const app = Vue.createApp({
                 this.mensagem = "Por favor, preencha todas as respostas antes de enviar.";
                 return;
             }
-    
+
             const payload = {
-                checklist: this.checklist,
-                observacoes: this.observacoes
+                placa_carro: placa,
+                nome_completo: nome,
+                trecho: this.checklist.find(item => item.pergunta === "Qual trecho você trabalha?")?.resposta,
+                data_ultima_manutencao: this.checklist.find(item => item.pergunta === "Qual a data da última manutenção?")?.resposta,
+                // Adicionar os outros campos aqui conforme o modelo da API
+                observacoes: this.observacoes,
             };
 
             try {
