@@ -39,4 +39,4 @@ class RequestCheckListModelSchema(BaseModel):
     esguicho_agua: str
     rack_escada: str
     estado_geral: str
-    descricao_varias: str
+    descricao_avarias: str

@@ -410,3 +410,143 @@
 2025-03-07 22:17:38,945 - root - INFO - HOMECONTRLLER iniciada com sucesso
 2025-03-07 22:17:38,945 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
 2025-03-07 22:17:38,946 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-08 16:22:05,877 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-08 16:22:10,120 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-08 16:22:11,645 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-08 16:22:11,691 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-08 16:22:15,763 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-08 16:22:17,239 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-08 16:22:17,284 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-08 16:22:21,365 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-08 16:22:22,873 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-08 16:22:22,873 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-08 16:22:22,874 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-08 16:22:22,874 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-08 16:22:22,874 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-08 16:22:22,875 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-08 19:33:38,755 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-08 19:33:38,942 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-08 19:52:44,813 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-08 19:52:48,931 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-08 19:52:53,421 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-08 19:52:53,456 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-08 19:52:57,524 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-08 19:53:03,060 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-08 19:53:03,079 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-08 19:53:07,141 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-08 19:53:08,567 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-08 19:53:08,568 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-08 19:53:08,569 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-08 19:53:08,569 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-08 19:53:08,569 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-08 19:53:08,570 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-08 20:46:00,104 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-08 20:46:04,266 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-08 20:46:06,737 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-08 20:46:06,758 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-08 20:46:10,819 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-08 20:46:39,842 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-08 20:46:39,854 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-08 20:46:43,930 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-08 20:46:48,346 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-08 20:46:48,348 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-08 20:46:48,349 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-08 20:46:48,349 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-08 20:46:48,349 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-08 20:46:48,350 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-08 20:47:08,863 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-08 20:47:09,030 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-09 00:50:49,784 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 00:50:53,892 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 00:50:55,394 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 00:50:56,164 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 00:51:00,227 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 00:51:02,692 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 00:51:02,692 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 00:51:06,750 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 00:51:09,225 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 00:51:09,225 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-09 00:51:09,226 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-09 00:51:09,226 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-09 00:51:09,226 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-09 00:51:09,227 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-09 00:53:05,006 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-09 00:53:05,178 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-09 00:53:05,184 - root - INFO - PDF do checklist gerado com sucesso!
+2025-03-09 00:59:35,132 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-09 00:59:35,302 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-09 00:59:35,305 - root - INFO - PDF do checklist gerado com sucesso!
+2025-03-09 00:59:36,990 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 00:59:41,133 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 00:59:42,651 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 00:59:42,753 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 00:59:46,824 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 00:59:48,280 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 00:59:48,281 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 00:59:52,337 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 01:00:08,982 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 01:00:08,983 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-09 01:00:08,983 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-09 01:00:08,984 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-09 01:00:08,984 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-09 01:00:08,984 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-09 01:32:13,724 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 01:32:17,965 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 01:32:20,443 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 01:32:20,530 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 01:32:24,593 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 01:32:26,059 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 01:32:26,059 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 01:32:30,115 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 01:32:31,540 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 01:32:31,540 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-09 01:32:31,541 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-09 01:32:31,541 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-09 01:32:31,541 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-09 01:32:31,541 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-09 01:32:37,566 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-09 01:32:37,733 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-09 01:32:37,737 - root - ERROR - Erro ao gerar PDF do checklist: [Errno 22] Invalid argument: 'NOME: DANIEL GUSTAVO ANICETO_PLACA: DGA1111_checklist.pdf'
+2025-03-09 01:33:33,268 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-09 01:33:33,418 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-09 01:33:33,420 - root - ERROR - Erro ao gerar PDF do checklist: [Errno 22] Invalid argument: 'NOME: DANIEL GUSTAVO ANICETO_PLACA: DGA2222_checklist.pdf'
+2025-03-09 01:33:51,338 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-09 01:33:51,490 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-09 01:33:51,492 - root - ERROR - Erro ao gerar PDF do checklist: [Errno 22] Invalid argument: 'NOME: DANIEL GUSTAVO ANICETO_PLACA: DGA2222_checklist.pdf'
+2025-03-09 01:34:00,715 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 01:34:04,825 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 01:34:06,314 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 01:34:06,394 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 01:34:10,457 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 01:34:17,964 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 01:34:17,965 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 01:34:22,023 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 01:34:23,456 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 01:34:23,456 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-09 01:34:23,456 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-09 01:34:23,457 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-09 01:34:23,457 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-09 01:34:23,457 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-09 01:35:19,598 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-09 01:35:19,763 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-09 01:35:19,765 - root - ERROR - Erro ao gerar PDF do checklist: [Errno 22] Invalid argument: 'NOME: DANIEL GUSTAVO ANICETO_PLACA: DGA3344_checklist.pdf'
+2025-03-09 01:36:35,792 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 01:36:39,891 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 01:36:42,542 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 01:36:42,633 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 01:36:46,689 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 01:36:55,157 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 01:36:55,159 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-09 01:36:59,217 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-09 01:37:04,660 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-09 01:37:04,660 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-09 01:37:04,661 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-09 01:37:04,662 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-09 01:37:04,662 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-09 01:37:04,662 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-09 01:37:15,767 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-09 01:37:15,918 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-09 01:37:15,922 - root - INFO - PDF do checklist gerado com sucesso!
+2025-03-09 01:40:42,770 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-09 01:40:42,935 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-09 01:40:42,939 - root - INFO - PDF do checklist gerado com sucesso!
