@@ -1,9 +1,16 @@
+import os
+import pickle
 from database.mongo import DataBaseConnection
 from models.db_checklist_model import RequestCheckListModel
 from schemas.checklist_schema import RequestCheckListModelSchema
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from uuid import uuid4
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.oauth2.credentials import Credentials
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+
 import logging
 import json
 
@@ -12,6 +19,8 @@ logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[logging.FileHandler("checklist_controller.log"), logging.StreamHandler()]
 )
+
+SCOPES = ["https://www.googleapis.com/auth/drive.file"]
 
 class ChecklistController:
     def __init__(self):
@@ -52,6 +61,7 @@ class ChecklistController:
         "esguicho_agua": "Esguicho de Água",
         "rack_escada": "Rack de Escada",
         "estado_geral": "Estado Geral",
+        "data_check_list": "Data do Check List",
         "descricao_avarias": "Descrição"
     }
     
@@ -87,8 +97,12 @@ class ChecklistController:
                 "esguicho_agua": data.esguicho_agua,
                 "rack_escada": data.rack_escada,
                 "estado_geral": data.estado_geral,
+                "data_check_list": data.data_check_list,
                 "descricao_avarias": data.descricao_avarias
+
             }
+        
+        check_list_fields["data_check_list"] = data.data_check_list.strftime("%d/%m/%Y %H:%M:%S")
         
         try:
             with open("checklist.json", "w", encoding="utf-8") as file:
@@ -152,3 +166,24 @@ class ChecklistController:
 
         except Exception as error:
             logging.error(f"Erro ao gerar PDF do checklist: {str(error)}")
+
+    def authenticate_google_drive():
+        credentials: Credentials = None
+
+        if os.path.exists("token.pickle"):
+            with open("token.pickle", "rb") as token:
+                credentials = pickle.load(token)
+
+        if not credentials or not credentials.valid:
+            if credentials and credentials.expired and credentials.refresh_token:
+                credentials.refresh(Request())
+            
+            else:
+                flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
+                credentials = flow.run_local_server(port=0)
+            
+            with open("token.pickle", "wb") as token:
+                pickle.dump(credentials, token)
+
+        return credentials
+    

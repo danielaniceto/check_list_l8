@@ -1,12 +1,12 @@
 {
-    "uuid_check_list": "cc5eb099902643248d969952d30e3263",
-    "placa_carro": "dga4578",
-    "nome_completo": "daniel gustavo aniceto",
-    "trecho": "BR050",
-    "data_ultima_manutencao": "25/12/2024",
-    "hodometro": 123458,
+    "uuid_check_list": "a6f85b117dde46df8cf48c0d66ed3fe2",
+    "placa_carro": "ERT4178",
+    "nome_completo": "viviano fagundees",
+    "trecho": "br364",
+    "data_ultima_manutencao": "28/02/2025",
+    "hodometro": 5487563,
     "nivel_combustivel": "4/4",
-    "validade_ipva": "2026",
+    "validade_ipva": "2025",
     "conservacao_veiculo": "OK",
     "ar_condicionado": "OK",
     "cartao_abastecimento": "OK",
@@ -27,5 +27,6 @@
     "esguicho_agua": "OK",
     "rack_escada": "OK",
     "estado_geral": "OK",
-    "descricao_avarias": "AAAAAAAAAAAAAAAAAAAAA"
+    "data_check_list": "09/03/2025 19:20:31",
+    "descricao_avarias": "hghgghghgggggggggggggggggggggggggggggggggggggggggggggggggghhhhhhhhhhhhhhhhhhhgggggggggggggggggggggg"
 }
