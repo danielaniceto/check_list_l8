@@ -39,4 +39,5 @@ class RequestCheckListModelSchema(BaseModel):
     esguicho_agua: str
     rack_escada: str
     estado_geral: str
+    data_check_list: datetime = datetime.now()
     descricao_avarias: str
