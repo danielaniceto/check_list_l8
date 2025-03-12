@@ -1,12 +1,21 @@
 const app = Vue.createApp({
     data() {
         return {
+            motoristas: ["Adriano dos Santos Oliveira", "Ailton Nunes Borges", "Daniel de Paula dos Santos",
+                        "Danilo Gabriel Ferreira de Oliveira", "Douglas Santos de Lima", "Gabriel Vitorio Gonçalves Ribeiro",
+                        "Gustavo de Sousa Vieira", "Gustavo Nunes da Silva", "Gustavo de Sousa Vieira",
+                        "Harley Lucas Pereira Santos", "João Carlos Silveira Braz", "João Victor Macedo Cardoso",
+                        "Juliano Estrela Vaz", "Kauã Borges Galvão", "Lucas Marques Martins", "Luis Felipe da Silva Araujo",
+                        "Magno Alexandre dos Santos", "Marcus Vinicius Morais Fernandes", "Pedro Augisto Arauj Cecilio",
+                        "Raniely Machado Andrade", "Rennê Ribeiro de Souza", "Severino dos Santos", "Uellinton Luis Silva", "Valdecy Vieira Martins Filho"
+                    ],
+
+            placa: ["STZ2E50", "RVZ4H66", "EXW2B72", "EGJ1D95", "EKU5E06", "FSE5G02", "EHX0G31",
+                    "SHU7F35", "STD6C71", "FKG0H84", "ECU5E11", "EEQ5D73", "ELY6G74", "EOB3A63"],
             checklist: [
-                { pergunta: "Qual a placa do Carro?", tipo: "texto", resposta: "" },
                 { pergunta: "Qual o hodômetro atual?", tipo: "texto", resposta: "" },
                 { pergunta: "Qual o nível de combustível?", tipo: "texto", resposta: "" },
                 { pergunta: "Qual a validade do IPVA?", tipo: "texto", resposta: "" },
-                { pergunta: "Qual seu nome completo?", tipo: "texto", resposta: "" },
                 { pergunta: "Qual trecho você trabalha?", tipo: "texto", resposta: "" },
                 { pergunta: "Qual a data da última manutenção?", tipo: "texto", resposta: "" },
                 { pergunta: "Conservação Geral do Carro", tipo: "opcao", resposta: "" },
@@ -36,16 +45,11 @@ const app = Vue.createApp({
     },
     methods: {
         async enviarChecklist() {
-            const placa = this.checklist.find(item => item.pergunta === "Qual a placa do Carro?")?.resposta;
-            const nome = this.checklist.find(item => item.pergunta === "Qual seu nome completo?")?.resposta;
 
             if (!placa || !nome) {
                 this.mensagem = "Por favor, preencha a placa do carro e seu nome.";
                 return;
             }
-
-            const placaRegex = /^[A-Z]{3}[0-9][A-Z0-9][0-9]{2}$/; // Placa nova Mercosul
-            const placaAntigaRegex = /^[A-Z]{3}-[0-9]{4}$/; // Placa antiga Brasileira
 
             if (!placaRegex.test(placa.toUpperCase()) && !placaAntigaRegex.test(placa.toUpperCase())) {
                 this.mensagem = "Por favor, insira uma placa válida.";
