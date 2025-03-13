@@ -649,3 +649,20 @@ TypeError: Object of type datetime is not JSON serializable
 2025-03-10 08:40:22,869 - root - INFO - Conectando ao Banco de Dados, MONGODB
 2025-03-10 08:40:27,219 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
 2025-03-10 08:41:17,486 - root - ERROR - Erro: Não foi possível conectar ao MongoDB, verifique a string de conexão ou a disponibilidade do servidor.
+2025-03-12 21:36:16,693 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-12 21:36:20,940 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-12 21:36:22,406 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-12 21:36:26,256 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-12 21:36:30,306 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-12 21:36:31,750 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-12 21:36:31,751 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-12 21:36:35,799 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-12 21:36:37,235 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-12 21:36:37,236 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-12 21:36:37,237 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-12 21:36:37,237 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-12 21:36:37,237 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-12 21:36:37,237 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-12 21:58:06,042 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-12 21:58:06,218 - root - INFO - Checklist inserido com sucesso no banco de dados
+2025-03-12 21:58:06,224 - root - INFO - PDF do checklist gerado com sucesso!
