@@ -16,21 +16,30 @@
         <div v-for="(item, index) in checklist" :key="index">
             <label>{{ item.pergunta }}</label>
 
+            <select v-if="item.tipo === 'select'" v-model="item.resposta">
+                <option v-if="item.pergunta === 'Qual a placa do Carro?'" v-for="placa in placas" :key="placa" :value="placa">
+                    {{ placa }}
+                </option>
+                <option v-if="item.pergunta === 'Qual seu nome completo?'" v-for="motorista in motoristas" :key="motorista" :value="motorista">
+                    {{ motorista }}
+                </option>
+            </select>
+
             <input v-if="item.tipo === 'texto'" type="text" v-model="item.resposta">
 
             <div v-else>
                 <label>
-                    <input type="radio" :name="'resposta_' + index" value="OK" v-model="item.resposta"> OK
+                    <input type="radio" :name="'resposta_' + item.pergunta" value="OK" v-model="item.resposta"> OK
                 </label>
                 <label>
-                    <input type="radio" :name="'resposta_' + index" value="NÃO OK" v-model="item.resposta"> NÃO OK
+                    <input type="radio" :name="'resposta_' + item.pergunta" value="NÃO OK" v-model="item.resposta"> NÃO OK
                 </label>
             </div>
         </div>
 
         <div>
-            <label>Observações:</label>
-            <textarea v-model="observacoes"></textarea>
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" v-model="observacoes"></textarea>
         </div>
 
         <button type="submit">Enviar Checklist</button>

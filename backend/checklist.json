@@ -1,10 +1,10 @@
 {
-    "uuid_check_list": "a6f85b117dde46df8cf48c0d66ed3fe2",
-    "placa_carro": "ERT4178",
-    "nome_completo": "viviano fagundees",
-    "trecho": "br364",
-    "data_ultima_manutencao": "28/02/2025",
-    "hodometro": 5487563,
+    "uuid_check_list": "6722b826583a476da2303047303ad69d",
+    "placa_carro": "EXW2B72",
+    "nome_completo": "Daniel de Paula dos Santos",
+    "trecho": "050",
+    "data_ultima_manutencao": "12/12/024",
+    "hodometro": 123232,
     "nivel_combustivel": "4/4",
     "validade_ipva": "2025",
     "conservacao_veiculo": "OK",
@@ -27,6 +27,6 @@
     "esguicho_agua": "OK",
     "rack_escada": "OK",
     "estado_geral": "OK",
-    "data_check_list": "09/03/2025 19:20:31",
-    "descricao_avarias": "hghgghghgggggggggggggggggggggggggggggggggggggggggggggggggghhhhhhhhhhhhhhhhhhhgggggggggggggggggggggg"
+    "data_check_list": "12/03/2025 21:36:22",
+    "descricao_avarias": "KAJSKJASASKALKSLAKSLAKSLAS"
 }
