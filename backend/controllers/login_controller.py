@@ -16,7 +16,8 @@ SECRET_KEY = "ProjetoL8Checklist"
 service_db_conection_users = DataBaseConnection.conection_db()["users"]
 
 class LoginValidation:
-    def __init__(self):
+    def __init__(self):  
+
         if service_db_conection_users is None:
             logging.critical("A conexão com banco de dados falhou, RECORDER_CONTROLLER")
             raise ValueError("A conexão com banco falhou")

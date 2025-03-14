@@ -666,3 +666,183 @@ TypeError: Object of type datetime is not JSON serializable
 2025-03-12 21:58:06,042 - root - INFO - Checklist salvo localmente como JSON.
 2025-03-12 21:58:06,218 - root - INFO - Checklist inserido com sucesso no banco de dados
 2025-03-12 21:58:06,224 - root - INFO - PDF do checklist gerado com sucesso!
+2025-03-14 10:45:21,900 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:45:26,854 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:45:28,940 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:45:35,043 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:45:39,142 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:45:40,763 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:45:40,765 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:45:44,865 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:45:46,547 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:45:46,547 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 10:45:46,547 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 10:45:46,549 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-14 10:45:46,549 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-14 10:45:46,549 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-14 10:52:06,523 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:52:11,703 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:52:13,792 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:52:14,942 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:52:19,029 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:52:21,362 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:52:21,363 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 10:52:21,364 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 10:52:21,364 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-14 10:52:21,365 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:52:25,445 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:52:27,623 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:52:27,624 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-14 10:52:27,625 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-14 10:54:45,281 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:54:50,151 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:54:52,367 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:54:52,368 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:54:56,889 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:54:59,223 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:54:59,223 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 10:54:59,224 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 10:54:59,225 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-14 10:54:59,225 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:55:03,314 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:55:05,430 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:55:05,430 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-14 10:55:05,431 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-14 10:57:54,209 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:57:58,791 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:58:01,096 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:58:02,260 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:58:06,347 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:58:07,928 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:58:07,929 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 10:58:07,929 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 10:58:07,930 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-14 10:58:07,930 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 10:58:11,999 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 10:58:14,568 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 10:58:14,569 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-14 10:58:14,570 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-14 11:01:04,385 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:01:09,106 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:01:10,645 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:01:11,758 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:01:15,851 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:01:18,392 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:01:18,393 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 11:01:18,394 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 11:01:18,394 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-14 11:01:18,395 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:01:22,485 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:01:25,089 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:01:25,091 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-14 11:01:25,093 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-14 11:03:02,326 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:03:06,509 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:03:08,737 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:03:10,089 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:03:14,202 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:03:16,507 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:03:16,527 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 11:03:16,528 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 11:04:12,469 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:04:17,161 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:04:19,440 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:04:20,562 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:04:24,710 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:04:26,678 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:04:26,710 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 11:04:26,710 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 11:05:01,154 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:05:05,260 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:05:07,014 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:05:08,121 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:05:12,220 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:05:13,921 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:05:13,952 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 11:05:13,953 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 11:05:13,953 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-14 11:05:13,953 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:05:18,463 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:05:21,042 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:05:21,042 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-14 11:05:21,043 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-14 11:07:36,277 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-14 11:07:36,278 - root - ERROR - Erro ao inserir checklist no banco de dados: 'ChecklistController' object has no attribute 'service_db_conection_check_list'
+2025-03-14 11:07:36,290 - root - INFO - PDF do checklist gerado com sucesso!
+2025-03-14 11:15:02,283 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:15:06,429 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:15:08,334 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:15:10,109 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:15:14,186 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:15:16,578 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:15:16,595 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 11:15:16,595 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 11:15:16,595 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-14 11:15:16,602 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:15:20,709 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:15:22,938 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:15:22,939 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-14 11:15:22,939 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-14 11:17:39,700 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:17:43,865 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:17:45,465 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:17:47,771 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:17:51,887 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:17:53,789 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:18:01,166 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:18:05,267 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:18:06,846 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:18:08,166 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:18:12,271 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:18:14,221 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:18:14,240 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 11:18:14,241 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 11:18:14,241 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-14 11:18:14,242 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 11:18:18,331 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 11:18:20,283 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 11:18:20,283 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-14 11:18:20,284 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-14 11:35:11,336 - root - INFO - Checklist salvo localmente como JSON.
+2025-03-14 11:35:11,337 - root - ERROR - Erro ao inserir checklist no banco de dados: 'ChecklistController' object has no attribute 'service_db_conection_check_list'
+2025-03-14 11:35:11,343 - root - INFO - PDF do checklist gerado com sucesso!
+2025-03-14 16:58:41,790 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 16:58:46,073 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 16:58:47,662 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 19:03:41,618 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 19:03:45,770 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 19:03:47,548 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 19:03:51,354 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 19:03:55,531 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 19:03:57,147 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 19:03:57,196 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 19:03:57,196 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 19:03:57,197 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-14 19:03:57,197 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 19:04:01,273 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 19:04:02,884 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 19:04:02,885 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-14 19:04:02,885 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-14 19:06:18,400 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 19:06:22,500 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 19:06:24,316 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 19:06:24,922 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 19:06:28,972 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 19:06:30,633 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 19:06:30,644 - root - INFO - Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER
+2025-03-14 19:06:30,644 - root - INFO - CHECKLISTCONTRLLER iniciada com sucesso
+2025-03-14 19:06:30,645 - root - INFO - HOMECONTRLLER iniciada com sucesso
+2025-03-14 19:06:30,645 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 19:06:34,709 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 19:06:36,342 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 19:06:36,343 - root - INFO - Conectado com sucesso ao banco de dados, PTE CONTROLLER
+2025-03-14 19:06:36,343 - root - INFO - PTE CONTROLLER iniciada com sucesso
+2025-03-14 19:11:19,257 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 19:11:23,462 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 19:11:26,150 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 19:12:15,607 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 19:12:19,694 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 19:12:25,333 - root - INFO - Conexão feita com sucesso, MONGODB!!!
+2025-03-14 19:16:21,703 - root - INFO - Conectando ao Banco de Dados, MONGODB
+2025-03-14 19:16:25,811 - root - INFO - Conectado com sucesso ao banco de dados, MONGODB
+2025-03-14 19:16:43,517 - root - INFO - Conexão feita com sucesso, MONGODB!!!
