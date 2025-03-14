@@ -1,14 +1,15 @@
 import os
 import pickle
+import textwrap
 from database.mongo import DataBaseConnection
 from models.db_checklist_model import RequestCheckListModel
 from schemas.checklist_schema import RequestCheckListModelSchema
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from uuid import uuid4
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaFileUpload
 from google.auth.transport.requests import Request
 
 import logging
@@ -21,15 +22,15 @@ logging.basicConfig(
 )
 
 SCOPES = ["https://www.googleapis.com/auth/drive.file"]
+service_db_conection_check_list = DataBaseConnection.conection_db()["check_list"]
 
 class ChecklistController:
     def __init__(self):
-        self.service_db_conection_check_list = DataBaseConnection.conection_db()["check_list"]
 
         logging.info("Conectado com sucesso ao banco de dados, CHECK LIST CONTROLLER")
         logging.info("CHECKLISTCONTRLLER iniciada com sucesso")
 
-        if self.service_db_conection_check_list is None:
+        if service_db_conection_check_list is None:
             logging.critical("A conexão com banco de dados falhou, CHECKLIST_CONTROLLER")
             raise ValueError("A conexão com banco falhou")
         
@@ -150,40 +151,59 @@ class ChecklistController:
             check_list_pdf.setFont("Helvetica", 12)
             y_position = height - 80
             left_margin = 50
+            max_width = width - 100
 
             for key, value in check_list_data.items():
                 label = self.FIELD_NAMES.get(key, key)
-                check_list_pdf.drawString(left_margin, y_position, f"{label}: {value}")
-                y_position -= 20
 
-                if y_position < 40:
-                    check_list_pdf.showPage()
-                    check_list_pdf.setFont("Helvetica", 12)
-                    y_position = height - 40
-            
+                wrapped_text = textwrap.wrap(f"{label}: {value}", width=80)
+
+                for line in wrapped_text:
+                    check_list_pdf.drawString(left_margin, y_position, line)
+                    y_position -= 20
+
+                    if y_position < 40:
+                        check_list_pdf.showPage()
+                        check_list_pdf.setFont("Helvetica", 12)
+                        y_position = height - 40
+
             check_list_pdf.save()
             logging.info("PDF do checklist gerado com sucesso!")
 
         except Exception as error:
             logging.error(f"Erro ao gerar PDF do checklist: {str(error)}")
 
-    def authenticate_google_drive():
-        credentials: Credentials = None
+class CheckListUploader:
+    def __init__(self):
+        self.SCOPES = ['https://www.googleapis.com/auth/drive.file']
+        self.SERVICE_ACCOUNT_FILE = "C:/Users/Daniel/Desktop/PASTAS/PROJETO L8/backend-credential.json"
+        self.FOLDER_ID = "1E7DvSg4E-1FXpcqb4hF5gRhsofGE4FK7"
 
-        if os.path.exists("token.pickle"):
-            with open("token.pickle", "rb") as token:
-                credentials = pickle.load(token)
+    def upload_pdf_google_drive(self, check_list_fields: str):
+        try:
+            SCOPES = ['https://www.googleapis.com/auth/drive.file']
 
-        if not credentials or not credentials.valid:
-            if credentials and credentials.expired and credentials.refresh_token:
-                credentials.refresh(Request())
-            
-            else:
-                flow = InstalledAppFlow.from_client_secrets_file("credentials.json", SCOPES)
-                credentials = flow.run_local_server(port=0)
-            
-            with open("token.pickle", "wb") as token:
-                pickle.dump(credentials, token)
+            if not self.SERVICE_ACCOUNT_FILE:
+                raise ValueError("Arquivo de credenciais não encontrado")
 
-        return credentials
+            credentials = service_account.Credentials.from_service_account_file(
+                self.SERVICE_ACCOUNT_FILE, scopes=SCOPES)
+
+            service = build('drive', 'v3', credentials=credentials)
+
+            file_metadata = {
+                'name': check_list_fields,
+                'mimeType': 'application/pdf',
+                'parents': ['1E7DvSg4E-1FXpcqb4hF5gRhsofGE4FK7']
+            }
+            media = MediaFileUpload(check_list_fields, mimetype='application/pdf')
+
+            file = service.files().create(body=file_metadata, media_body=media, fields='id').execute()
+
+            print(f'Arquivo enviado com sucesso! ID: {file.get("id")}')
+            return file.get('id')
+
+        except Exception as e:
+            print(f"Erro ao fazer upload: {e}")
+            return None
     

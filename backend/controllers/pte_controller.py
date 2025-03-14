@@ -11,11 +11,10 @@ logging.basicConfig(
     handlers=[logging.FileHandler("pte_controller.log"), logging.StreamHandler()]
 )
 
-service_db_conection_pte = DataBaseConnection.conection_db()["pte"]
-
 class PteController:
     def __init__(self):
-        
+        service_db_conection_pte = DataBaseConnection.conection_db()["pte"]
+                
         logging.info("Conectado com sucesso ao banco de dados, PTE CONTROLLER")
         logging.info("PTE CONTROLLER iniciada com sucesso")
 
